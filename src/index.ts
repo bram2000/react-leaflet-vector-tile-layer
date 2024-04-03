@@ -5,7 +5,8 @@ import {
 import L, { TileLayer as LeafletTileLayer, TileLayerOptions } from 'leaflet';
 
 export interface VectorTileLayerProps extends TileLayerOptions, LayerProps {
-    styleUrl: string
+    styleUrl: any;
+    transformRequest: (url: string) => {url: string};
 }
 
 const VectorTileLayer = createTileLayerComponent<
